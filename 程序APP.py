@@ -10,30 +10,19 @@ model = joblib.load('rf-2.pkl')
 
 # 特征范围定义（根据提供的特征范围和数据类型）
 feature_ranges = {
-    "admission_type": {"type": "categorical", "options": [0,1,2]},
     "weight": {"type": "numerical", "min": 30.0, "max": 300, "default": 50.0},
-    "renal_disease": {"type": "categorical", "options": [0, 1]},
     "sofa": {"type": "numerical", "min": 0.0, "max": 24.0, "default": 6.0},
-    "sirs": {"type": "categorical", "options": [0,1,2,3,4]},
     "aki_score":{"type": "categorical", "options": [0,1,2,3]},
     "InvasiveVent": {"type": "categorical", "options": [0, 1]},
+    "crrt": {"type": "categorical", "options": [0, 1]},
     "custom_Vasoactive Drugs": {"type": "categorical", "options": [0, 1]},
     "temperature_first": {"type": "numerical", "min": 34.0, "max": 42.0, "default": 36.5},
-    "heart_rate_first": {"type": "numerical", "min": 30.0, "max": 250.0, "default": 80.0},
-    "resp_rate_first": {"type": "numerical", "min": 6.0, "max": 60.0, "default": 18.0},
-    "sbp_ni_first": {"type": "numerical", "min": 30.0, "max": 270.0, "default": 109.0},
-    "spo2_first": {"type": "numerical", "min": 40.0, "max": 100.0, "default": 94.0},
-    "pco2_first": {"type": "numerical", "min": 10.0, "max": 130.0, "default": 30.0},
+    "lactate_first": {"type": "numerical", "min": 0.5, "max": 30.0, "default": 2.0},
     "wbc_first": {"type": "numerical", "min": 0.1, "max": 100.0, "default": 10.0},
-    "rdw_first": {"type": "numerical", "min": 10.0, "max": 30.0, "default": 20.0},
     "platelet_first": {"type": "numerical", "min": 1.0, "max": 3000.0, "default": 400.0},
     "calcium_total_first": {"type": "numerical", "min": 5.0, "max": 15.0, "default": 8.0},
     "ptt_first": {"type": "numerical", "min": 10.0, "max": 150.0, "default": 80.0},
     "glucose_first": {"type": "numerical", "min": 30.0, "max": 1000.0, "default": 80.0},
-    "potassium_first": {"type": "numerical", "min": 2.0, "max": 7.5, "default": 5.0},
-    "hemoglobin_first": {"type": "numerical", "min": 5.0, "max": 22.0, "default": 10.0},
-    "magnesium_first": {"type": "numerical", "min": 0.5, "max": 10.0, "default": 5.0},
-    "phosphate_first": {"type": "numerical", "min": 1.0, "max": 20.0, "default": 7.4},
 }
 
 # Streamlit 界面
